@@ -1,0 +1,19 @@
+/* Hochschule Kempten - EI/WE/MT - Info1
+ * Aufgabe 301-26 - Kompetenzziel: Einfache Mikrocontrollerprogrammierung
+ * 2025-01-05 - Henning Oberscheidt
+ */
+
+
+
+function setup() {
+	let val = 0;
+	pinMode(D1, INPUT_PULLUP);
+	pinMode(D6, OUTPUT);
+	digitalWrite(D6, LOW);
+}
+
+function loop() {
+	val = !digitalRead(D1);
+	digitalWrite(D6, val);
+	
+}
