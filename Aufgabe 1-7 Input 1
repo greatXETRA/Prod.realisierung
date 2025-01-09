@@ -1,0 +1,17 @@
+/* Hochschule Kempten - EI/WE/MT - Info1
+ * Aufgabe 1-25 - Input 1
+ * 2025-01-06 - Henning Oberscheidt
+ */
+
+
+function setup() {
+	pinMode(D1, INPUT_PULLUP);
+	pinMode(D7, OUTPUT);
+	digitalWrite(D7, LOW);
+	let val = 0;
+}
+
+function loop() {
+	val = digitalRead(D1);
+	digitalWrite(D7, val);
+}
