@@ -1,0 +1,29 @@
+/* Hochschule Kempten - EI/WE/MT - Info1
+ * Aufgabe 1-16 - Blink 1 (count)
+ * 2025-01-05 - Henning Oberscheidt
+ */
+
+let state = 0;
+let counter = 0;
+
+function setup() {
+	pinMode(D6, OUTPUT);
+	digitalWrite(D6, HIGH);
+	state = 1;
+}
+
+function loop() {
+	if (counter == 100) {
+		if (state == 1) {
+			digitalWrite(D6,LOW);
+			state = 0;
+		}
+		else {
+			digitalWrite(D6,HIGH);
+			state = 1;
+		}
+		counter = 0;
+	}
+	counter = counter + 1;
+	delay(2);
+}
