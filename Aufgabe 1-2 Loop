@@ -1,0 +1,27 @@
+/* Hochschule Kempten - EI/WE/MT - Info1
+ * Aufgabe 1-13 - Loop
+ * 2024-11-13 - Henning Oberscheidt
+ */
+let startZeit = 0;
+let newb = 0;
+
+function setup() {
+	pinMode(D6, OUTPUT);
+	digitalWrite(D6, 1);
+	startZeit = millis();
+	Serial.begin(9600);
+	Serial.println(startZeit);
+}
+
+function loop() {
+	
+	let aktuelleZeit = millis();
+	if (aktuelleZeit - startZeit > 3000) {
+		digitalWrite(D6, 0);
+		
+	}
+	if (aktuelleZeit - startZeit > 6000)	{
+		digitalWrite(D6, 1);
+		startZeit = millis();
+	}
+}
