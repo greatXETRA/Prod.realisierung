@@ -1,0 +1,14 @@
+/* Hochschule Kempten - EI/WE/MT - Info1
+ * Aufgabe 1-11 - Output
+ * 2024-11-13 - Henning Oberscheidt
+ */
+
+function setup() {
+	
+	pinMode(D5, OUTPUT);
+	digitalWrite(D5, HIGH);
+}
+
+function loop() {
+	
+}
